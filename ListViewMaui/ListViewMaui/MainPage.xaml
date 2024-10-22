@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListViewMaui"           
+             xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView" 
+             x:Class="ListViewMaui.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ContactInfo/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <local:Behavior/>
+    </ContentPage.Behaviors>
+
+    <ContentPage.Content>
+        <Grid  RowDefinitions="*">
+            <listView:SfListView x:Name="listView"
+                                 ItemsSource="{Binding Contacts}" 
+                                 ItemSize="50"                                                                                     
+                                 SelectionMode="None" ScrollBarVisibility="Never">
+                <listView:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid  RowDefinitions="Auto,Auto,*">
+                            <Label Text="{Binding Name}"/>
+                            <Label Text="{Binding ContactNumber}" Grid.Row="1"/>
+                            <BoxView HeightRequest="1" Background="Gray" Grid.Row="2" VerticalOptions="End"/>
+                        </Grid>
+                    </DataTemplate>
+                </listView:SfListView.ItemTemplate>
+            </listView:SfListView>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>
