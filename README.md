@@ -1,4 +1,4 @@
-# how-to-get-touch-position-relative-to-listview-item-in-itemtapped-event-in-.net-maui-listview
+# How to get touch position relative to ListView item in ItemTapped event in .NET MAUI ListView (SfListView)?
 
 This example demonstrate how to get touch position relative to listview item in itemtapped event in .NET MAUI ListView.
 
